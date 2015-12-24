@@ -46,3 +46,6 @@ end
 
 # Use Slim as template engine
 gem 'slim-rails'
+
+# Use RuboCop as Ruby static code analyzer
+gem 'rubocop', require: false
