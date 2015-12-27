@@ -36,6 +36,9 @@ group :development, :test do
   gem 'byebug'
   # Use Rspec as test framework
   gem 'rspec-rails', '~> 3.0.0'
+  gem 'guard-rspec', require: false
+  # Use RuboCop as Ruby static code analyzer
+  gem 'rubocop', require: false
 end
 
 group :development do
@@ -48,6 +51,3 @@ end
 
 # Use Slim as template engine
 gem 'slim-rails'
-
-# Use RuboCop as Ruby static code analyzer
-gem 'rubocop', require: false
