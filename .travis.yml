@@ -1,0 +1,19 @@
+sudo: required
+
+language: ruby
+
+rvm:
+- 2.2.3
+
+addons:
+  postgresql: "9.3"
+
+services:
+  - docker
+  - postgresql
+
+before_script:
+  - psql -c 'create database love_equation_test;' -U postgres
+
+script:
+  - ruby -v; bundle; bundle exec rake
