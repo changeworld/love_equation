@@ -9,7 +9,7 @@
 # Offense count: 31
 # Configuration parameters: AllowURI, URISchemes.
 Metrics/LineLength:
-  Max: 130
+  Max: 180
 
 # Offense count: 1
 # Cop supports --auto-correct.
