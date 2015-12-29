@@ -51,3 +51,6 @@ end
 
 # Use Slim as template engine
 gem 'slim-rails'
+
+# Use Bootstrap as HTML, CSS, and JS framework
+gem 'bootstrap-sass'
