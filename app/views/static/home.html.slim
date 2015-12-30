@@ -1,8 +1,11 @@
-img src=asset_path("logo.png")
-
-= form_tag(:action => :jadge, method: 'post') do
-  = label_tag :age, '年齢:'
-  = select_tag :age, options_for_select(@age_items),  :include_blank => true
-  = label_tag :track_record, '今までの恋愛経験数:'
-  = select_tag :track_record, options_for_select(@track_record_items),  :include_blank => true
-  = submit_tag '判定'
+.text-center
+  img.img-responsive.img-responsive-center src=asset_path('logo.png')
+  hr
+  = form_tag action: :jadge, method: :post, class: 'text-center' do
+    = label_tag :age, '年齢:'
+    = select_tag :age, options_for_select(@age_items),  :include_blank => true
+    br
+    = label_tag :track_record, '今までの恋愛経験数:'
+    = select_tag :track_record, options_for_select(@track_record_items),  :include_blank => true
+    br
+    = submit_tag '判定', class: 'btn btn-large btn-primary'
