@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'static/home'
   get 'static/help'
+  post 'static/jadge'
 
   root to: 'static#home'
 

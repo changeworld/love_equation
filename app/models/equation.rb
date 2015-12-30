@@ -2,7 +2,7 @@ class Equation
   include ActiveModel::Model
 
   def love_equation_1st(n)
-    # Love equation first
+    # Love equation 1st
     # F(0) = 0.5
     # F(n+1) = F(n) * F(n) + (1+F(n))/2 * (1-F(n))
     #        = F(n) * F(n) + (F(n) * F(n) + 1)/2
@@ -12,7 +12,7 @@ class Equation
   end
 
   def love_sequence_1st(n)
-    # return Love sequence first
+    # return Love sequence 1st
     love_equation_1st(n)
     @love_equation_1st
   end
@@ -24,9 +24,15 @@ class Equation
     # x/17 = track_record/(age - 18)
     # x = track_record/(age - 18) * 17
     # 残りの恋愛できる回数 y
-    # y = x - track_record - 1
+    # y = x - track_record
     #   = track_record/(age - 18) * 17 - track_record
     #   = track_record(1/(age - 18) * 17 - 1)
     (track_record.to_f / (age - 18) * 17 - track_record).to_i
+  end
+
+  def get_love_equation_1st_score(age, track_record)
+    # Return Love equation 1st score
+    count = love_times(age, track_record) < 1 ? 1 : love_times(age, track_record)
+    ((love_equation_1st(count - 1) + 0.01) * 100).to_d.floor.to_i
   end
 end
