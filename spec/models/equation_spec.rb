@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Equation, type: :model do
-  describe 'equation_1st' do
+  describe 'love_equation_1st' do
     before(:all) do
       @equation = Equation.new
     end
@@ -15,7 +15,7 @@ RSpec.describe Equation, type: :model do
     end
   end
 
-  describe 'get_equation_1st' do
+  describe 'love_sequence_1st' do
     before(:all) do
       @equation = Equation.new
     end
