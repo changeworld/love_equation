@@ -18,21 +18,35 @@ class Equation
   end
 
   def love_times(age, track_record)
-    # 最大期間 結婚上限年齢(35) - 結婚下限年齢(18) = 17
-    # 経過期間 = (age - 18)
+    # 最大期間 結婚上限年齢(35) - 恋愛下限年齢(13) = 22
+    # 経過期間 = age - 13
     # 恋愛できる回数 x
-    # x/17 = track_record/(age - 18)
-    # x = track_record/(age - 18) * 17
+    # x/22 = track_record/(age - 13)
+    # x = track_record/(age - 13) * 22
     # 残りの恋愛できる回数 y
     # y = x - track_record
-    #   = track_record/(age - 18) * 17 - track_record
-    #   = track_record(1/(age - 18) * 17 - 1)
-    (track_record.to_f / (age - 18) * 17 - track_record).to_i
+    #   = track_record/(age - 13) * 22 - track_record
+    #   = track_record(1/(age - 13) * 22 - 1)
+    (track_record.to_f / (age - 13) * 22 - track_record).to_i
   end
 
-  def get_love_equation_1st_score(age, track_record)
+  def love_equation_1st_score(loves_remaining)
     # Return Love equation 1st score
-    count = love_times(age, track_record) < 1 ? 1 : love_times(age, track_record)
+    count = loves_remaining < 1 ? 1 : loves_remaining
     ((love_equation_1st(count - 1) + 0.01) * 100).to_d.floor.to_i
+  end
+
+  def get_judgment_result(age, track_record)
+    # Return Love equation judgment result
+    loves_remaining = love_times(age, track_record)
+    score = love_equation_1st_score(loves_remaining)
+    if loves_remaining <= 0
+      judgment_result = 'これが『最後の恋』です。結婚したいのであれば、何がなんでもその人と結婚しましょう。'
+    elsif loves_remaining == 1
+      judgment_result = "たとえ今付き合っている人と別れたとしても、次の恋愛が“最後の恋”になる見込みです。今付き合っている人が#{score}点以上なら結婚を、そうでなければ別れるのが結婚するパートナーの期待値を最大にする選択です。"
+    else
+      judgment_result = "たとえ今付き合っている人と別れたとしても、あと#{loves_remaining}回ぐらい恋愛する余裕（心技体）があります。今付き合っている人が#{score}点以上なら結婚を、そうでなければ別れるのが結婚するパートナーの期待値を最大にする選択です。"
+    end
+    judgment_result
   end
 end

@@ -34,26 +34,48 @@ RSpec.describe Equation, type: :model do
       @equation = Equation.new
     end
 
-    it '今まで16回の恋愛をした34歳の残りの期待恋愛回数 is 1回' do
-      expect(@equation.love_times(34, 16)).to eq(1)
+    it '今まで1回の恋愛をした35歳の残りの期待恋愛回数 is 0回' do
+      expect(@equation.love_times(35, 1)).to eq(0)
     end
 
-    it '今まで1回の恋愛をした20歳の残りの期待恋愛回数 is 7回' do
-      expect(@equation.love_times(20, 1)).to eq(7)
+    it '今まで1回の恋愛をした24歳の残りの期待恋愛回数 is 1回' do
+      expect(@equation.love_times(24, 1)).to eq(1)
+    end
+
+    it '今まで1回の恋愛をした20歳の残りの期待恋愛回数 is 2回' do
+      expect(@equation.love_times(20, 1)).to eq(2)
     end
   end
 
-  describe 'get_love_equation_1st_score' do
+  describe 'love_equation_1st_score' do
     before(:all) do
       @equation = Equation.new
     end
 
-    it '今まで16回の恋愛をした34歳の期待スコア is 51' do
-      expect(@equation.get_love_equation_1st_score(34, 16)).to eq(51)
+    it '後1回恋愛できる人の期待スコア is 51' do
+      expect(@equation.love_equation_1st_score(1)).to eq(51)
     end
 
-    it '今まで1回の恋愛をした20歳の期待スコア is 83' do
-      expect(@equation.get_love_equation_1st_score(20, 1)).to eq(83)
+    it '後7回恋愛できる人の期待スコア is 83' do
+      expect(@equation.love_equation_1st_score(7)).to eq(83)
+    end
+  end
+
+  describe 'get_judgment_result' do
+    before(:all) do
+      @equation = Equation.new
+    end
+
+    it '今まで1回の恋愛をした35歳の判定結果 is 最後の恋' do
+      expect(@equation.get_judgment_result(35, 1)).to eq('これが『最後の恋』です。結婚したいのであれば、何がなんでもその人と結婚しましょう。')
+    end
+
+    it '今まで1回の恋愛をした22歳の判定結果 is 最後の恋' do
+      expect(@equation.get_judgment_result(22, 1)).to eq('たとえ今付き合っている人と別れたとしても、次の恋愛が“最後の恋”になる見込みです。今付き合っている人が51点以上なら結婚を、そうでなければ別れるのが結婚するパートナーの期待値を最大にする選択です。')
+    end
+
+    it '今まで1回の恋愛をした20歳の判定結果 is 後2回の恋' do
+      expect(@equation.get_judgment_result(20, 1)).to eq('たとえ今付き合っている人と別れたとしても、あと2回ぐらい恋愛する余裕（心技体）があります。今付き合っている人が63点以上なら結婚を、そうでなければ別れるのが結婚するパートナーの期待値を最大にする選択です。')
     end
   end
 end
