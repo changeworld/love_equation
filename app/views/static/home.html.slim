@@ -2,7 +2,7 @@
   img.img-responsive.img-responsive-center src=asset_path('logo.png')
   hr
   p あなたの年齢と今まで経験した恋愛回数に基づき、現在付き合っている人と結婚すべきかどうかを判定します。
-  = form_tag action: :jadge, method: :post, class: 'text-center' do
+  = form_tag action: :jadge, method: :post do
     = label_tag :age, '年齢:'
     = select_tag :age, options_for_select(@age_items),  :include_blank => true
     br
