@@ -18,4 +18,4 @@ deploy:
   app: love-equation
   on:
     repo: changeworld/love_equation
-    rvm: 2.0.0
+    rvm: 2.2.3
