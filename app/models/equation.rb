@@ -41,11 +41,11 @@ class Equation
     loves_remaining = love_times(age, track_record)
     score = love_equation_1st_score(loves_remaining)
     if loves_remaining <= 0
-      judgment_result = 'これが『最後の恋』です。結婚したいのであれば、何がなんでもその人と結婚しましょう。'
+      judgment_result = I18n.t('static.jadge.zero')
     elsif loves_remaining == 1
-      judgment_result = "たとえ今付き合っている人と別れたとしても、次の恋愛が“最後の恋”になる見込みです。今付き合っている人が#{score}点以上なら結婚を、そうでなければ別れるのが結婚するパートナーの期待値を最大にする選択です。"
+      judgment_result = I18n.t('static.jadge.one', score: score)
     else
-      judgment_result = "たとえ今付き合っている人と別れたとしても、あと#{loves_remaining}回ぐらい恋愛する余裕（心技体）があります。今付き合っている人が#{score}点以上なら結婚を、そうでなければ別れるのが結婚するパートナーの期待値を最大にする選択です。"
+      judgment_result = I18n.t('static.jadge.more', loves_remaining: loves_remaining, score: score)
     end
     judgment_result
   end
