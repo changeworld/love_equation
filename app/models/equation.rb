@@ -27,7 +27,7 @@ class Equation
     # y = x - track_record
     #   = track_record/(age - 13) * 22 - track_record
     #   = track_record(1/(age - 13) * 22 - 1)
-    (track_record.to_f / (age - 13) * 22 - track_record).to_i
+    ((track_record * 22) / (age - 13) - track_record).to_i
   end
 
   def love_equation_1st_score(loves_remaining)
