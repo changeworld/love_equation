@@ -41,21 +41,20 @@ group :development, :test do
   gem 'rubocop', require: false
   # Use Coveralls for Test Coverage History & Statistics
   gem 'coveralls', require: false
+  # Use MetricFu for fist full of code metrics
+  gem 'metric_fu', require: false
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
 
 # Use Slim as template engine
 gem 'slim-rails'
-
 # Use Bootstrap as HTML, CSS, and JS framework
 gem 'bootstrap-sass'
-
 # Use Rails 12factor for Heroku
 gem 'rails_12factor', group: :production
