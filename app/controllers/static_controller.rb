@@ -8,7 +8,7 @@ class StaticController < ApplicationController
     age = params[:age].to_i
     track_record = params[:track_record].to_i
     equation = Equation.new
-    @judgment_result = equation.get_judgment_result(age, track_record)
+    @judgment_result = equation.judgment_result(age, track_record)
   end
 
   def help
