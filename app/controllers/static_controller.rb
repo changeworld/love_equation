@@ -5,10 +5,20 @@ class StaticController < ApplicationController
   end
 
   def jadge
-    age = params[:age].to_i
-    track_record = params[:track_record].to_i
     equation = Equation.new
-    @judgment_result = equation.judgment_result(age, track_record)
+    @judgment_result = equation.achievements_judgment_result(params[:age].to_i, params[:love_track_record].to_i)
+  end
+
+  def achievement
+    equation = Equation.new
+    @judgment_result = equation.achievements_judgment_result(params[:age].to_i, params[:love_track_record].to_i)
+    render action: :jadge
+  end
+
+  def prospect
+    equation = Equation.new
+    @judgment_result = equation.prospects_judgment_result(params[:love_prospects].to_i)
+    render action: :jadge
   end
 
   def help
