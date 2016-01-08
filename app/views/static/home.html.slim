@@ -2,13 +2,13 @@
   img.img-responsive.img-responsive-center src=asset_path('logo.png')
   hr
   p
-    = I18n.t('static.home.question')
-  = form_tag action: :jadge, method: :post do
+    = I18n.t('static.home.question_based_on_achievements')
+  = form_tag action: :achievement, method: :post do
     = label_tag :age, I18n.t('age') + ':'
     = select_tag :age, options_for_select(@age_items),  :include_blank => true
     br
-    = label_tag :track_record, I18n.t('love_track_record') + ':'
-    = select_tag :track_record, options_for_select(@track_record_items),  :include_blank => true
+    = label_tag :love_achievements, I18n.t('love_achievements') + ':'
+    = select_tag :love_achievements, options_for_select(@times),  :include_blank => true
     br
     = submit_tag I18n.t('jadge'), class: 'btn btn-large btn-primary'
   .sponsor-gas
@@ -18,3 +18,10 @@
       style="display:inline-block;width:320px;height:100px"
       data-ad-client="ca-pub-6019477344384520"
       data-ad-slot="4280385095")
+  p
+    = I18n.t('static.home.question_based_on_prospects')
+  = form_tag action: :prospect, method: :post do
+    = label_tag :love_prospects, I18n.t('love_prospects') + ':'
+    = select_tag :love_prospects, options_for_select(@times),  :include_blank => true
+    br
+    = submit_tag I18n.t('jadge'), class: 'btn btn-large btn-primary'

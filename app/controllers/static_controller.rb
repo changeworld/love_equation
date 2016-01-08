@@ -1,12 +1,7 @@
 class StaticController < ApplicationController
   def home
     @age_items = (18..100).map { |n| [n, n] }
-    @track_record_items = (1..100).map { |n| [n, n] }
-  end
-
-  def jadge
-    equation = Equation.new
-    @judgment_result = equation.achievements_judgment_result(params[:age].to_i, params[:love_track_record].to_i)
+    @times = (1..100).map { |n| [n, n] }
   end
 
   def achievement

@@ -8,7 +8,7 @@ RSpec.describe StaticController, type: :controller do
         expect(response).to be_success
         expect(response).to render_template(:home)
         expect(assigns(:age_items)).not_to be_nil
-        expect(assigns(:track_record_items)).not_to be_nil
+        expect(assigns(:times)).not_to be_nil
       end
     end
 
@@ -25,15 +25,6 @@ RSpec.describe StaticController, type: :controller do
     describe 'achievement' do
       it 'returns http success' do
         post :achievement, age: 34, love_achievements: 16
-        expect(response).to be_success
-        expect(response).to render_template(:jadge)
-        expect(assigns(:judgment_result)).not_to be_nil
-      end
-    end
-
-    describe 'jadge' do
-      it 'returns http success' do
-        post :jadge, age: 34, track_record: 16
         expect(response).to be_success
         expect(response).to render_template(:jadge)
         expect(assigns(:judgment_result)).not_to be_nil
