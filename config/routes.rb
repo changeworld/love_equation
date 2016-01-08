@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   get 'static/home'
   get 'static/help'
-  post 'static/jadge'
+  post 'static/achievement'
+  post 'static/prospect'
 
   root to: 'static#home'
 

@@ -66,16 +66,52 @@ RSpec.describe Equation, type: :model do
       @equation = Equation.new
     end
 
-    it '今まで1回の恋愛をした35歳の判定結果 is 最後の恋' do
-      expect(@equation.get_judgment_result(35, 1)).to eq('これが『最後の恋』です。結婚したいのであれば、何がなんでもその人と結婚しましょう。')
+    it '残り恋愛回数が0, 期待スコアが0 is 最後の恋' do
+      expect(@equation.judgment_result(0, 0)).to eq('これが『最後の恋』です。結婚したいのであれば、何がなんでもその人と結婚しましょう。')
     end
 
-    it '今まで1回の恋愛をした22歳の判定結果 is 最後の恋' do
-      expect(@equation.get_judgment_result(22, 1)).to eq('たとえ今付き合っている人と別れたとしても、次の恋愛が“最後の恋”になる見込みです。今付き合っている人が51点以上なら結婚を、そうでなければ別れるのが結婚するパートナーの期待値を最大にする選択です。')
+    it '残り恋愛回数が1, 期待スコアが51 is 次が最後の恋' do
+      expect(@equation.judgment_result(1, 51)).to eq('たとえ今付き合っている人と別れたとしても、次の恋愛が“最後の恋”になる見込みです。今付き合っている人が51点以上なら結婚を、そうでなければ別れるのが結婚するパートナーの期待値を最大にする選択です。')
+    end
+
+    it '残り恋愛回数が2, 期待スコアが63 is 最後の恋' do
+      expect(@equation.judgment_result(2, 63)).to eq('たとえ今付き合っている人と別れたとしても、あと2回ぐらい恋愛する余裕（心技体）があります。今付き合っている人が63点以上なら結婚を、そうでなければ別れるのが結婚するパートナーの期待値を最大にする選択です。')
+    end
+  end
+
+  describe 'achievements_judgment_result' do
+    before(:all) do
+      @equation = Equation.new
+    end
+
+    it '今まで1回の恋愛をした35歳の判定結果 is 最後の恋' do
+      expect(@equation.achievements_judgment_result(35, 1)).to eq('これが『最後の恋』です。結婚したいのであれば、何がなんでもその人と結婚しましょう。')
+    end
+
+    it '今まで1回の恋愛をした22歳の判定結果 is 次が最後の恋' do
+      expect(@equation.achievements_judgment_result(22, 1)).to eq('たとえ今付き合っている人と別れたとしても、次の恋愛が“最後の恋”になる見込みです。今付き合っている人が51点以上なら結婚を、そうでなければ別れるのが結婚するパートナーの期待値を最大にする選択です。')
     end
 
     it '今まで1回の恋愛をした20歳の判定結果 is 後2回の恋' do
-      expect(@equation.get_judgment_result(20, 1)).to eq('たとえ今付き合っている人と別れたとしても、あと2回ぐらい恋愛する余裕（心技体）があります。今付き合っている人が63点以上なら結婚を、そうでなければ別れるのが結婚するパートナーの期待値を最大にする選択です。')
+      expect(@equation.achievements_judgment_result(20, 1)).to eq('たとえ今付き合っている人と別れたとしても、あと2回ぐらい恋愛する余裕（心技体）があります。今付き合っている人が63点以上なら結婚を、そうでなければ別れるのが結婚するパートナーの期待値を最大にする選択です。')
+    end
+  end
+
+  describe 'prospects_judgment_result' do
+    before(:all) do
+      @equation = Equation.new
+    end
+
+    it '残り恋愛回数が0 is 最後の恋' do
+      expect(@equation.prospects_judgment_result(0)).to eq('これが『最後の恋』です。結婚したいのであれば、何がなんでもその人と結婚しましょう。')
+    end
+
+    it '残り恋愛回数が1 is 期待スコア51点' do
+      expect(@equation.prospects_judgment_result(1)).to eq('たとえ今付き合っている人と別れたとしても、次の恋愛が“最後の恋”になる見込みです。今付き合っている人が51点以上なら結婚を、そうでなければ別れるのが結婚するパートナーの期待値を最大にする選択です。')
+    end
+
+    it '残り恋愛回数が2 is 期待スコア63点' do
+      expect(@equation.prospects_judgment_result(2)).to eq('たとえ今付き合っている人と別れたとしても、あと2回ぐらい恋愛する余裕（心技体）があります。今付き合っている人が63点以上なら結婚を、そうでなければ別れるのが結婚するパートナーの期待値を最大にする選択です。')
     end
   end
 end

@@ -36,10 +36,8 @@ class Equation
     ((love_equation_1st(count - 1) + 0.01) * 100).to_d.floor.to_i
   end
 
-  def get_judgment_result(age, track_record)
+  def judgment_result(loves_remaining, score)
     # Return Love equation judgment result
-    loves_remaining = love_times(age, track_record)
-    score = love_equation_1st_score(loves_remaining)
     if loves_remaining <= 0
       judgment_result = I18n.t('static.jadge.zero')
     elsif loves_remaining == 1
@@ -48,5 +46,18 @@ class Equation
       judgment_result = I18n.t('static.jadge.more', loves_remaining: loves_remaining, score: score)
     end
     judgment_result
+  end
+
+  def achievements_judgment_result(age, love_achievements)
+    # Return Love equation judgment result
+    loves_remaining = love_times(age, love_achievements)
+    score = love_equation_1st_score(loves_remaining)
+    judgment_result(loves_remaining, score)
+  end
+
+  def prospects_judgment_result(love_prospects)
+    # Return Love equation judgment result
+    score = love_equation_1st_score(love_prospects)
+    judgment_result(love_prospects, score)
   end
 end
