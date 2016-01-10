@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  get 'static/home'
-  post 'static/achievement'
-  post 'static/prospect'
-
-  root to: 'static#home'
+  root 'static#home'
+  post '/achievement' => 'static#achievement'
+  post '/prospect' => 'static#prospect'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
