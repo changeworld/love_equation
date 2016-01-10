@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Equation, type: :model do
-  describe 'love_equation_1st' do
-    before(:all) do
-      @equation = Equation.new
-    end
+  before(:all) do
+    @equation = Equation.new
+  end
 
+  describe 'love_equation_1st' do
     it 'f(0) is 0.5' do
       expect(@equation.love_equation_1st(0)).to eq(0.5)
     end
@@ -16,7 +16,7 @@ RSpec.describe Equation, type: :model do
   end
 
   describe 'love_sequence_1st' do
-    before(:all) do
+    before(:each) do
       @equation = Equation.new
     end
 
@@ -30,10 +30,6 @@ RSpec.describe Equation, type: :model do
   end
 
   describe 'love_times' do
-    before(:all) do
-      @equation = Equation.new
-    end
-
     it '今まで1回の恋愛をした35歳の残りの期待恋愛回数 is 0回' do
       expect(@equation.love_times(35, 1)).to eq(0)
     end
@@ -48,10 +44,6 @@ RSpec.describe Equation, type: :model do
   end
 
   describe 'love_equation_1st_score' do
-    before(:all) do
-      @equation = Equation.new
-    end
-
     it '後1回恋愛できる人の期待スコア is 51' do
       expect(@equation.love_equation_1st_score(1)).to eq(51)
     end
@@ -62,10 +54,6 @@ RSpec.describe Equation, type: :model do
   end
 
   describe 'get_judgment_result' do
-    before(:all) do
-      @equation = Equation.new
-    end
-
     it '残り恋愛回数が0, 期待スコアが0 is 最後の恋' do
       expect(@equation.judgment_result(0, 0)).to eq('これが『最後の恋』です。結婚したいのであれば、何がなんでもその人と結婚しましょう。')
     end
@@ -80,10 +68,6 @@ RSpec.describe Equation, type: :model do
   end
 
   describe 'achievements_judgment_result' do
-    before(:all) do
-      @equation = Equation.new
-    end
-
     it '今まで1回の恋愛をした35歳の判定結果 is 最後の恋' do
       expect(@equation.achievements_judgment_result(35, 1)).to eq('これが『最後の恋』です。結婚したいのであれば、何がなんでもその人と結婚しましょう。')
     end
@@ -98,10 +82,6 @@ RSpec.describe Equation, type: :model do
   end
 
   describe 'prospects_judgment_result' do
-    before(:all) do
-      @equation = Equation.new
-    end
-
     it '残り恋愛回数が0 is 最後の恋' do
       expect(@equation.prospects_judgment_result(0)).to eq('これが『最後の恋』です。結婚したいのであれば、何がなんでもその人と結婚しましょう。')
     end
