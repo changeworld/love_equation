@@ -11,14 +11,6 @@ RSpec.describe StaticController, type: :controller do
         expect(assigns(:times)).not_to be_nil
       end
     end
-
-    describe 'help' do
-      it 'returns http success' do
-        get :help
-        expect(response).to be_success
-        expect(response).to render_template(:help)
-      end
-    end
   end
 
   describe 'POST' do
