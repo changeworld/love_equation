@@ -16,10 +16,6 @@ RSpec.describe Equation, type: :model do
   end
 
   describe 'love_sequence_1st' do
-    before(:each) do
-      @equation = Equation.new
-    end
-
     it 'f(0) is [0.5]' do
       expect(@equation.love_sequence_1st(0)).to eq([0.5])
     end
