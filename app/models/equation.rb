@@ -14,7 +14,11 @@ class Equation
   def love_sequence_1st(n)
     # return Love sequence 1st
     love_equation_1st(n)
-    @love_equation_1st
+    sequences = []
+    @love_equation_1st.each_with_index do |love_equation, counter|
+      sequences << love_equation if counter <= n
+    end
+    sequences
   end
 
   def love_times(age, track_record)
