@@ -15,7 +15,4 @@ class StaticController < ApplicationController
     @judgment_result = equation.prospects_judgment_result(params[:love_prospects].to_i)
     render action: :jadge
   end
-
-  def help
-  end
 end
