@@ -8,7 +8,7 @@
     = select_tag :age, options_for_select(@age_items),  :include_blank => true
     br
     = label_tag :love_achievements, I18n.t('love_achievements') + ':'
-    = select_tag :love_achievements, options_for_select(@times),  :include_blank => true
+    = select_tag :love_achievements, options_for_select(@achievement_times),  :include_blank => true
     br
     = submit_tag I18n.t('jadge'), class: 'btn btn-large btn-primary'
   .sponsor-gas
@@ -22,6 +22,6 @@
     = I18n.t('static.home.question_based_on_prospects')
   = form_tag action: :prospect, method: :post do
     = label_tag :love_prospects, I18n.t('love_prospects') + ':'
-    = select_tag :love_prospects, options_for_select(@times),  :include_blank => true
+    = select_tag :love_prospects, options_for_select(@prospect_times),  :include_blank => true
     br
     = submit_tag I18n.t('jadge'), class: 'btn btn-large btn-primary'

@@ -8,7 +8,8 @@ RSpec.describe StaticController, type: :controller do
         expect(response).to be_success
         expect(response).to render_template(:home)
         expect(assigns(:age_items)).not_to be_nil
-        expect(assigns(:times)).not_to be_nil
+        expect(assigns(:achievement_times)).not_to be_nil
+        expect(assigns(:prospect_times)).not_to be_nil
       end
     end
   end
