@@ -6,7 +6,7 @@ class StaticController < ApplicationController
 
   def achievement
     equation = Equation.new
-    @judgment_result = equation.achievements_judgment_result(params[:age].to_i, params[:love_track_record].to_i)
+    @judgment_result = equation.achievements_judgment_result(params[:age].to_i, params[:love_achievements].to_i)
     render action: :jadge
   end
 
