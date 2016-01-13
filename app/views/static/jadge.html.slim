@@ -1,7 +1,7 @@
 .text-center
   img.img-responsive.img-responsive-center src=asset_path('logo.png')
   hr
-  =@judgment_result
+  =simple_format(@judgment_result)
   .sponsor-gas
     p
       = I18n.t('sponsored_links')
