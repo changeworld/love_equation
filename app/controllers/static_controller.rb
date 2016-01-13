@@ -1,7 +1,8 @@
 class StaticController < ApplicationController
   def home
     @age_items = (18..100).map { |n| [n, n] }
-    @times = (1..100).map { |n| [n, n] }
+    @achievement_times = (1..100).map { |n| [n, n] }
+    @prospect_times = (0..100).map { |n| [n, n] }
   end
 
   def achievement
