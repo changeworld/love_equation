@@ -8,3 +8,5 @@
 [![Issue Count](https://codeclimate.com/github/changeworld/love_equation/badges/issue_count.svg)](https://codeclimate.com/github/changeworld/love_equation)
 
 A Certain Mathematical Love Equation
+
+![logo](https://github.com/changeworld/love_equation/blob/master/app/assets/images/logo.png?raw=true)
