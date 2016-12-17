@@ -35,7 +35,11 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   # Use Rspec as test framework
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec', '3.1.0'
+  gem 'rspec-rails', '3.1.0'
+  ## Lock rake version
+  gem 'rake', '10.5.0'
+
   gem 'guard-rspec', require: false
   # Use RuboCop as Ruby static code analyzer
   gem 'rubocop', require: false
