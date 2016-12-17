@@ -7,8 +7,9 @@
 [![Coverage Status](https://coveralls.io/repos/changeworld/love_equation/badge.svg?branch=feature%2Fgem_coveralls&service=github)](https://coveralls.io/github/changeworld/love_equation?branch=feature%2Fgem_coveralls)
 [![Code Climate](https://codeclimate.com/github/changeworld/love_equation/badges/gpa.svg)](https://codeclimate.com/github/changeworld/love_equation)
 [![Issue Count](https://codeclimate.com/github/changeworld/love_equation/badges/issue_count.svg)](https://codeclimate.com/github/changeworld/love_equation)
+[![Dependency Status](https://gemnasium.com/badges/github.com/changeworld/love_equation.svg)](https://gemnasium.com/github.com/changeworld/love_equation)
 
-A Certain Mathematical Love Equation
+A Certain Mathematical Love Equation.
 
 ![logo](https://github.com/changeworld/love_equation/blob/master/app/assets/images/logo.png?raw=true)
 
