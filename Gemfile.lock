@@ -54,7 +54,7 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     builder (3.2.2)
-    byebug (8.2.1)
+    byebug (9.0.6)
     cane (2.6.2)
       parallel
     chronic (0.10.2)
