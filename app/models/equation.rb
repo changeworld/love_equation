@@ -43,13 +43,12 @@ class Equation
   def judgment_result(loves_remaining, score)
     # Return Love equation judgment result
     if loves_remaining <= 0
-      judgment_result = I18n.t('static.jadge.zero')
+      I18n.t('static.jadge.zero')
     elsif loves_remaining == 1
-      judgment_result = I18n.t('static.jadge.one', score: score)
+      I18n.t('static.jadge.one', score: score)
     else
-      judgment_result = I18n.t('static.jadge.more', loves_remaining: loves_remaining, score: score)
+      I18n.t('static.jadge.more', loves_remaining: loves_remaining, score: score)
     end
-    judgment_result
   end
 
   def achievements_judgment_result(age, love_achievements)
