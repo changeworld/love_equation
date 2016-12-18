@@ -36,6 +36,7 @@ group :development, :test do
   gem 'byebug'
   # Use Rspec as test framework
   gem 'guard-rspec', require: false
+  gem 'rails-controller-testing'
   gem 'rspec', '~> 3.0'
   gem 'rspec-rails', '~> 3.0'
   # Use RuboCop as Ruby static code analyzer
