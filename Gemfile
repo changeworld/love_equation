@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.7.1'
+gem 'rails', '5.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
@@ -36,6 +36,7 @@ group :development, :test do
   gem 'byebug'
   # Use Rspec as test framework
   gem 'guard-rspec', require: false
+  gem 'rails-controller-testing'
   gem 'rspec', '~> 3.0'
   gem 'rspec-rails', '~> 3.0'
   # Use RuboCop as Ruby static code analyzer
