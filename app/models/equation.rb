@@ -8,7 +8,7 @@ class Equation
     #        = F(n) * F(n) + (F(n) * F(n) + 1)/2
     #        = (F(n) * F(n) + 1)/2
     @love_equation_1st ||= []
-    @love_equation_1st[n] ||= (n < 1) ? 0.5 : (love_equation_1st(n - 1)**2 + 1) / 2
+    @love_equation_1st[n] ||= n < 1 ? 0.5 : (love_equation_1st(n - 1)**2 + 1) / 2
   end
 
   def love_sequence_1st(n)
