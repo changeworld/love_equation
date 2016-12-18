@@ -35,9 +35,9 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   # Use Rspec as test framework
+  gem 'guard-rspec', require: false
   gem 'rspec', '~> 3.0'
   gem 'rspec-rails', '~> 3.0'
-  gem 'guard-rspec', require: false
   # Use RuboCop as Ruby static code analyzer
   gem 'rubocop', require: false
   # Use Coveralls for Test Coverage History & Statistics
