@@ -6,13 +6,13 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
-Style/AsciiComments:
-  Enabled: false
-
 # Offense count: 31
 # Configuration parameters: AllowURI, URISchemes.
 Metrics/LineLength:
   Max: 180
+
+Style/AsciiComments:
+  Enabled: false
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -38,6 +38,9 @@ Style/EmptyLinesAroundBlockBody:
 Style/ExtraSpacing:
   Exclude:
     - 'bin/setup'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
 
 # Offense count: 17
 # Cop supports --auto-correct.
