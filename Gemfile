@@ -38,7 +38,7 @@ group :development, :test do
   gem 'rspec', '~> 3.0'
   gem 'rspec-rails', '~> 3.0'
   ## Lock rake version
-  gem 'rake', '10.5.0'
+  gem 'rake', '11.3.0'
 
   gem 'guard-rspec', require: false
   # Use RuboCop as Ruby static code analyzer
