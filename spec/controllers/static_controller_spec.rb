@@ -17,7 +17,7 @@ RSpec.describe StaticController, type: :controller do
   describe 'POST' do
     describe 'achievement' do
       it 'returns http success' do
-        post :achievement, params: { age: 34, love_achievements: 16}
+        post :achievement, params: { age: 34, love_achievements: 16 }
         expect(response).to be_success
         expect(response).to render_template(:jadge)
         expect(assigns(:judgment_result)).not_to be_nil
