@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'static#home'
+  root 'static#index'
   post '/achievement' => 'static#achievement'
   post '/prospect' => 'static#prospect'
 

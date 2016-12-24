@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe 'static/home.html.slim', type: :view do
-  it 'displays home page' do
+RSpec.describe 'static/index.html.slim', type: :view do
+  it 'displays index page' do
     age_items = (18..100).map { |n| [n, n] }
     achievement_times = (1..100).map { |n| [n, n] }
     prospect_times = (0..100).map { |n| [n, n] }
@@ -9,6 +9,6 @@ RSpec.describe 'static/home.html.slim', type: :view do
     assign(:achievement_times, achievement_times)
     assign(:prospect_times, prospect_times)
     render
-    expect(rendered).to render_template(:home)
+    expect(rendered).to render_template(:index)
   end
 end

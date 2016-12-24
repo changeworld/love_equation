@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe StaticController, type: :controller do
   describe 'GET' do
-    describe 'home' do
+    describe 'index' do
       it 'returns http success' do
-        get :home
+        get :index
         expect(response).to be_success
-        expect(response).to render_template(:home)
+        expect(response).to render_template(:index)
         expect(assigns(:age_items)).not_to be_nil
         expect(assigns(:achievement_times)).not_to be_nil
         expect(assigns(:prospect_times)).not_to be_nil
