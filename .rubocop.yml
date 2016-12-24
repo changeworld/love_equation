@@ -38,14 +38,6 @@ Style/BlockComments:
 Style/Documentation:
   Enabled: false
 
-# Offense count: 3
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/EmptyLinesAroundBlockBody:
-  Exclude:
-    - 'db/schema.rb'
-    - 'spec/controllers/static_controller_spec.rb'
-
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: AllowForAlignment.
@@ -60,4 +52,5 @@ Style/FrozenStringLiteralComment:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 Style/StringLiterals:
-  Enabled: false
+  Exclude:
+    - 'bin/setup'
