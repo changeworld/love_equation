@@ -6,10 +6,24 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
-# Offense count: 31
+Rails:
+  Enabled: true
+
+AllCops:
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - !ruby/regexp /old_and_unused\.rb$/
+    - 'Guardfile/**/*'
+    - 'vendor/**/*'
+
 # Configuration parameters: AllowURI, URISchemes.
 Metrics/LineLength:
-  Max: 180
+  Max: 120
 
 Style/AsciiComments:
   Enabled: false

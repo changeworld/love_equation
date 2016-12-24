@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Equation, type: :model do
+  ZERO = I18n.t('static.jadge.zero')
+  ONE  = I18n.t('static.jadge.one', score: 51)
+  MORE = I18n.t('static.jadge.more', loves_remaining: 2, score: 63)
+
   before(:all) do
     @equation = Equation.new
   end
@@ -51,43 +55,43 @@ RSpec.describe Equation, type: :model do
 
   describe 'get_judgment_result' do
     it '残り恋愛回数が0, 期待スコアが0 is 最後の恋' do
-      expect(@equation.judgment_result(0, 0)).to eq('これが『最後の恋』です。結婚したいのであれば、何がなんでもその人と結婚しましょう。')
+      expect(@equation.judgment_result(0, 0)).to eq(ZERO)
     end
 
     it '残り恋愛回数が1, 期待スコアが51 is 次が最後の恋' do
-      expect(@equation.judgment_result(1, 51)).to eq(I18n.t('static.jadge.one', score: 51))
+      expect(@equation.judgment_result(1, 51)).to eq(ONE)
     end
 
     it '残り恋愛回数が2, 期待スコアが63 is 最後の恋' do
-      expect(@equation.judgment_result(2, 63)).to eq(I18n.t('static.jadge.more', loves_remaining: 2, score: 63))
+      expect(@equation.judgment_result(2, 63)).to eq(MORE)
     end
   end
 
   describe 'achievements_judgment_result' do
     it '今まで1回の恋愛をした35歳の判定結果 is 最後の恋' do
-      expect(@equation.achievements_judgment_result(35, 1)).to eq('これが『最後の恋』です。結婚したいのであれば、何がなんでもその人と結婚しましょう。')
+      expect(@equation.achievements_judgment_result(35, 1)).to eq(ZERO)
     end
 
     it '今まで1回の恋愛をした22歳の判定結果 is 次が最後の恋' do
-      expect(@equation.achievements_judgment_result(22, 1)).to eq(I18n.t('static.jadge.one', score: 51))
+      expect(@equation.achievements_judgment_result(22, 1)).to eq(ONE)
     end
 
     it '今まで1回の恋愛をした20歳の判定結果 is 後2回の恋' do
-      expect(@equation.achievements_judgment_result(20, 1)).to eq(I18n.t('static.jadge.more', loves_remaining: 2, score: 63))
+      expect(@equation.achievements_judgment_result(20, 1)).to eq(MORE)
     end
   end
 
   describe 'prospects_judgment_result' do
     it '残り恋愛回数が0 is 最後の恋' do
-      expect(@equation.prospects_judgment_result(0)).to eq('これが『最後の恋』です。結婚したいのであれば、何がなんでもその人と結婚しましょう。')
+      expect(@equation.prospects_judgment_result(0)).to eq(ZERO)
     end
 
     it '残り恋愛回数が1 is 期待スコア51点' do
-      expect(@equation.prospects_judgment_result(1)).to eq(I18n.t('static.jadge.one', score: 51))
+      expect(@equation.prospects_judgment_result(1)).to eq(ONE)
     end
 
     it '残り恋愛回数が2 is 期待スコア63点' do
-      expect(@equation.prospects_judgment_result(2)).to eq(I18n.t('static.jadge.more', loves_remaining: 2, score: 63))
+      expect(@equation.prospects_judgment_result(2)).to eq(MORE)
     end
   end
 end
