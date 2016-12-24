@@ -23,7 +23,7 @@ AllCops:
 
 # Configuration parameters: AllowURI, URISchemes.
 Metrics/LineLength:
-  Max: 120
+  Max: 110
 
 Style/AsciiComments:
   Enabled: false
