@@ -1,0 +1,3 @@
+inspecode:
+  reek: default
+  rubocop: auto-fix
