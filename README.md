@@ -1,7 +1,6 @@
 # love_equation
 
-[![Stories in Ready](https://badge.waffle.io/changeworld/love_equation.svg?label=ready&title=Ready)](http://waffle.io/changeworld/love_equation)
-[![Stories in In Progress](https://badge.waffle.io/changeworld/love_equation.svg?label=in progress&title=In Progress)](http://waffle.io/changeworld/love_equation)  
+[![Stories in Ready](https://badge.waffle.io/changeworld/love_equation.svg?label=ready&title=Ready)](http://waffle.io/changeworld/love_equation)  
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Build Status](https://travis-ci.org/changeworld/love_equation.svg?branch=master)](https://travis-ci.org/changeworld/love_equation)
 [![Coverage Status](https://coveralls.io/repos/changeworld/love_equation/badge.svg?branch=feature%2Fgem_coveralls&service=github)](https://coveralls.io/github/changeworld/love_equation?branch=feature%2Fgem_coveralls)
