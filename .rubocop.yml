@@ -18,7 +18,7 @@ AllCops:
     - 'config/**/*'
     - 'script/**/*'
     - !ruby/regexp /old_and_unused\.rb$/
-    - 'Guardfile/**/*'
+    - 'Guardfile'
     - 'vendor/**/*'
 
 # Configuration parameters: AllowURI, URISchemes.
