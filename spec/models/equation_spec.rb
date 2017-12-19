@@ -67,31 +67,31 @@ RSpec.describe Equation, type: :model do
     end
   end
 
-  describe 'achievements_judgment_result' do
+  describe 'achievements_judgment' do
     it '今まで1回の恋愛をした35歳の判定結果 is 最後の恋' do
-      expect(@equation.achievements_judgment_result(35, 1)).to eq(ZERO)
+      expect(@equation.achievements_judgment(35, 1)).to eq(ZERO)
     end
 
     it '今まで1回の恋愛をした22歳の判定結果 is 次が最後の恋' do
-      expect(@equation.achievements_judgment_result(22, 1)).to eq(ONE)
+      expect(@equation.achievements_judgment(22, 1)).to eq(ONE)
     end
 
     it '今まで1回の恋愛をした20歳の判定結果 is 後2回の恋' do
-      expect(@equation.achievements_judgment_result(20, 1)).to eq(MORE)
+      expect(@equation.achievements_judgment(20, 1)).to eq(MORE)
     end
   end
 
-  describe 'prospects_judgment_result' do
+  describe 'prospects_judgment' do
     it '残り恋愛回数が0 is 最後の恋' do
-      expect(@equation.prospects_judgment_result(0)).to eq(ZERO)
+      expect(@equation.prospects_judgment(0)).to eq(ZERO)
     end
 
     it '残り恋愛回数が1 is 期待スコア51点' do
-      expect(@equation.prospects_judgment_result(1)).to eq(ONE)
+      expect(@equation.prospects_judgment(1)).to eq(ONE)
     end
 
     it '残り恋愛回数が2 is 期待スコア63点' do
-      expect(@equation.prospects_judgment_result(2)).to eq(MORE)
+      expect(@equation.prospects_judgment(2)).to eq(MORE)
     end
   end
 end
