@@ -21,34 +21,30 @@ AllCops:
     - 'Guardfile'
     - 'vendor/**/*'
 
+# Configuration parameters: CountComments, ExcludedMethods.
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
 # Configuration parameters: AllowURI, URISchemes.
 Metrics/LineLength:
   Max: 110
 
 Style/AsciiComments:
   Enabled: false
-
-# Offense count: 1
 # Cop supports --auto-correct.
 Style/BlockComments:
   Exclude:
     - 'spec/spec_helper.rb'
-
 # Missing top level class documentation comment.
 Style/Documentation:
   Enabled: false
-
-# Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: AllowForAlignment.
 Style/ExtraSpacing:
   Exclude:
     - 'bin/setup'
-
 Style/FrozenStringLiteralComment:
   Enabled: false
-
-# Offense count: 17
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 Style/StringLiterals:
