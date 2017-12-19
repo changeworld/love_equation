@@ -51,14 +51,14 @@ class Equation
     end
   end
 
-  def achievements_judgment_result(age, love_achievements)
+  def achievements_judgment(age, love_achievements)
     # Return Love equation judgment result
     loves_remaining = love_times(age, love_achievements)
     score = love_equation_1st_score(loves_remaining)
     judgment_result(loves_remaining, score)
   end
 
-  def prospects_judgment_result(love_prospects)
+  def prospects_judgment(love_prospects)
     # Return Love equation judgment result
     score = love_equation_1st_score(love_prospects)
     judgment_result(love_prospects, score)

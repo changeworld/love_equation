@@ -28,7 +28,10 @@ Metrics/BlockLength:
     - 'spec/**/*'
 # Configuration parameters: AllowURI, URISchemes.
 Metrics/LineLength:
-  Max: 110
+  Max: 85
+  Exclude:
+    - 'Rakefile'
+    - 'spec/spec_helper.rb'
 
 Style/AsciiComments:
   Enabled: false
