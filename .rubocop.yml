@@ -18,6 +18,7 @@ AllCops:
     - 'config/**/*'
     - 'script/**/*'
     - !ruby/regexp /old_and_unused\.rb$/
+    - 'Gemfile'
     - 'Guardfile'
     - 'vendor/**/*'
 
