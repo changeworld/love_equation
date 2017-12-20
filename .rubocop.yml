@@ -33,9 +33,11 @@ Metrics/LineLength:
     - 'Rakefile'
     - 'spec/spec_helper.rb'
 
+Rails/FilePath:
+  Exclude:
+    - 'spec/rails_helper.rb'
 Style/AsciiComments:
   Enabled: false
-# Cop supports --auto-correct.
 Style/BlockComments:
   Exclude:
     - 'spec/spec_helper.rb'
