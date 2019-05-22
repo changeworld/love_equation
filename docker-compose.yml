@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        - APP_HOME=${PWD}
+        - APP_HOME=.
         - BUNDLE_JOBS=4
     ports:
       - "3000:3000"
@@ -13,7 +13,7 @@ services:
     depends_on:
       - postgres
     volumes:
-      - .:${PWD}
+      - .
     environment:
       - DATABASE_URL=postgres://postgres:@postgres
   spring:
@@ -27,7 +27,7 @@ services:
       DATABASE_URL: postgres://postgres:@postgres
       SPRING_SOCKET: /tmp/spring/spring.sock
     volumes:
-      - .:${PWD}
+      - .
       - spring_data:/tmp/spring
   postgres:
     image: postgres:9.6
