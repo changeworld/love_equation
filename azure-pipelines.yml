@@ -10,11 +10,9 @@ pool:
   vmImage: 'macos-latest'
 
 steps:
-- task: UseRubyVersion@0
+- task: DockerCompose@0
   inputs:
-    versionSpec: '>= 2.5'
-
-- script: |
-    docker-compose -f docker-compose.yml --project-directory . -p docs up -d
-    docker wait docs_sut_1
-    docker-compose -f docker-compose.yml --project-directory . down
+    containerregistrytype: 'Container Registry'
+    dockerComposeFile: '**/docker-compose.yml'
+    action: 'Run a Docker Compose command'
+    dockerComposeCommand: 'build'
