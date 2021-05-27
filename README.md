@@ -9,6 +9,6 @@ A Certain Mathematical Love Equation.
 
 ![logo](https://github.com/changeworld/love_equation/blob/master/app/assets/images/logo.png?raw=true)
 
-## License
+## Licensing
 
-[MIT License](LICENSE). For more imformation, please see LICENSE.
+The repository code is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT). See [LICENSE](LICENSE).
