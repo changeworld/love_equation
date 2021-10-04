@@ -61,5 +61,3 @@ gem 'slim-rails'
 gem 'bootstrap-sass'
 # Use Rails 12factor for Heroku
 gem 'rails_12factor', group: :production
-# Use Skylight for Performance profiler service
-gem 'skylight'
