@@ -12,6 +12,7 @@ module LoveEquation
     config.load_defaults "6.0"
     # Default locale Japanese
     config.i18n.default_locale = :ja
+    Rails.application.config.action_controller.urlsafe_csrf_tokens = false
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
