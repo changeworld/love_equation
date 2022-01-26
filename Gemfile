@@ -13,7 +13,7 @@ gem 'mini_racer'
 
 gem 'bootsnap', require: false
 
-gem "webpacker"
+gem 'webpacker'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -32,6 +32,13 @@ gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Use Slim as template engine
+gem 'slim-rails'
+# Use Bootstrap as HTML, CSS, and JS framework
+gem 'bootstrap-sass'
+# Use Rails 12factor for Heroku
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -55,10 +62,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
-# Use Slim as template engine
-gem 'slim-rails'
-# Use Bootstrap as HTML, CSS, and JS framework
-gem 'bootstrap-sass'
-# Use Rails 12factor for Heroku
-gem 'rails_12factor', group: :production
