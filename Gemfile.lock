@@ -398,6 +398,3 @@ DEPENDENCIES
   unicorn
   web-console (~> 3.4)
   webpacker
-
-BUNDLED WITH
-   1.17.2
