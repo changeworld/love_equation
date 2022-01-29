@@ -127,7 +127,8 @@ GEM
     hirb (0.7.3)
     i18n (1.9.1)
       concurrent-ruby (~> 1.0)
-    jbuilder (2.11.2)
+    jbuilder (2.11.5)
+      actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     jquery-rails (4.4.0)
       rails-dom-testing (>= 1, < 3)
@@ -378,7 +379,7 @@ DEPENDENCIES
   byebug
   coveralls
   guard-rspec
-  jbuilder (~> 2.0)
+  jbuilder
   jquery-rails
   metric_fu
   mini_racer
