@@ -12,6 +12,26 @@ RSpec.describe StaticController, type: :controller do
         expect(assigns(:prospect_times)).not_to be_nil
       end
     end
+    describe 'achievement' do
+      it 'returns http success' do
+        get :achievement
+        expect(response).to be_successful
+        expect(response).to render_template(:index)
+        expect(assigns(:age_items)).not_to be_nil
+        expect(assigns(:achievement_times)).not_to be_nil
+        expect(assigns(:prospect_times)).not_to be_nil
+      end
+    end
+    describe 'prospect' do
+      it 'returns http success' do
+        get :prospect
+        expect(response).to be_successful
+        expect(response).to render_template(:index)
+        expect(assigns(:age_items)).not_to be_nil
+        expect(assigns(:achievement_times)).not_to be_nil
+        expect(assigns(:prospect_times)).not_to be_nil
+      end
+    end
   end
 
   describe 'POST' do
