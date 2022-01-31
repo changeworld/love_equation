@@ -7,17 +7,25 @@ class StaticController < ApplicationController
   end
 
   def achievement
-    equation = Equation.new
-    @judgment_result = equation.achievements_judgment(
-      params[:age].to_i,
-      params[:love_achievements].to_i
-    )
-    render action: :jadge
+    if request.post?
+      equation = Equation.new
+      @judgment_result = equation.achievements_judgment(
+        params[:age].to_i,
+        params[:love_achievements].to_i
+      )
+      render action: :jadge
+    else
+      index
+    end
   end
 
   def prospect
-    equation = Equation.new
-    @judgment_result = equation.prospects_judgment(params[:love_prospects].to_i)
-    render action: :jadge
+    if request.post?
+      equation = Equation.new
+      @judgment_result = equation.prospects_judgment(params[:love_prospects].to_i)
+      render action: :jadge
+    else
+      index
+    end
   end
 end
