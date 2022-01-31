@@ -24,7 +24,7 @@ RSpec.describe StaticController, type: :controller do
       end
     end
 
-    describe 'prospects' do
+    describe 'prospect' do
       it 'returns http success' do
         post :prospect, params: { love_prospects: 16 }
         expect(response).to be_successful
