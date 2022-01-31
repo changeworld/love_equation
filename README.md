@@ -7,7 +7,7 @@
 
 A Certain Mathematical Love Equation.
 
-![logo](https://github.com/changeworld/love_equation/blob/master/app/assets/images/logo.png?raw=true)
+![logo](https://raw.githubusercontent.com/changeworld/love_equation/main/app/assets/images/logo.png)
 
 ## Licensing
 
