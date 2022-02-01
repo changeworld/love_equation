@@ -1,22 +1,22 @@
 class Equation
   include ActiveModel::Model
 
-  def love_equation_1st(n)
+  def love_equation_1st(num)
     # Love equation 1st
     # F(0) = 0.5
     # F(n+1) = F(n) * F(n) + (1+F(n))/2 * (1-F(n))
     #        = F(n) * F(n) + (F(n) * F(n) + 1)/2
     #        = (F(n) * F(n) + 1)/2
     @love_equation_1st ||= []
-    @love_equation_1st[n] ||= n < 1 ? 0.5 : (love_equation_1st(n - 1)**2 + 1) / 2
+    @love_equation_1st[num] ||= num < 1 ? 0.5 : (love_equation_1st(num - 1)**2 + 1) / 2
   end
 
-  def love_sequence_1st(n)
+  def love_sequence_1st(num)
     # return Love sequence 1st
-    love_equation_1st(n)
+    love_equation_1st(num)
     sequences = []
     @love_equation_1st.each_with_index do |love_equation, counter|
-      sequences << love_equation if counter <= n
+      sequences << love_equation if counter <= num
     end
     sequences
   end

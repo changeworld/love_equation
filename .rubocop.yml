@@ -58,13 +58,6 @@ Lint/NonDeterministicRequireOrder:
 Metrics/BlockLength:
   Max: 74
 
-# Offense count: 2
-# Configuration parameters: MinNameLength, AllowNamesEndingInNumbers, AllowedNames, ForbiddenNames.
-# AllowedNames: at, by, db, id, in, io, ip, of, on, os, pp, to
-Naming/MethodParameterName:
-  Exclude:
-    - 'app/models/equation.rb'
-
 # Offense count: 1
 # Cop supports --auto-correct.
 Style/BlockComments:
