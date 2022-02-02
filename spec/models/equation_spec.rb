@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe Equation, type: :model do
-  ZERO = I18n.t('static.jadge.zero')
-  ONE  = I18n.t('static.jadge.one', score: 51)
-  MORE = I18n.t('static.jadge.more', loves_remaining: 2, score: 63)
+ZERO = I18n.t('static.jadge.zero')
+ONE  = I18n.t('static.jadge.one', score: 51)
+MORE = I18n.t('static.jadge.more', loves_remaining: 2, score: 63)
 
+RSpec.describe Equation, type: :model do
   before(:all) do
     @equation = Equation.new
   end
