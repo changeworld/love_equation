@@ -39,13 +39,6 @@ Layout/SpaceInsideArrayLiteralBrackets:
   Exclude:
     - 'config/environments/production.rb'
 
-# Offense count: 3
-# Configuration parameters: AllowedMethods.
-# AllowedMethods: enums
-Lint/ConstantDefinitionInBlock:
-  Exclude:
-    - 'spec/models/equation_spec.rb'
-
 # Offense count: 1
 # Cop supports --auto-correct.
 Lint/NonDeterministicRequireOrder:
