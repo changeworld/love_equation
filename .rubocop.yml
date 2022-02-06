@@ -41,13 +41,6 @@ Style/Documentation:
     - 'app/models/equation.rb'
     - 'config/application.rb'
 
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/ExpandPathArguments:
-  Exclude:
-    - 'Rakefile'
-    - 'spec/rails_helper.rb'
-
 # Offense count: 45
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
