@@ -25,11 +25,9 @@ AllCops:
     - 'config/spring.rb'
     - 'db/schema.rb'
 
-# Offense count: 3
-# Configuration parameters: CountComments, CountAsOne, ExcludedMethods, IgnoredMethods.
-# IgnoredMethods: refine
 Metrics/BlockLength:
-  Max: 74
+  Exclude:
+    - 'spec/**/*'
 
 # Offense count: 5
 # Configuration parameters: AllowedConstants.
