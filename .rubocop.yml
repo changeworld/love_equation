@@ -29,17 +29,9 @@ Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
 
-# Offense count: 5
-# Configuration parameters: AllowedConstants.
+# Allow undocument top-level (non-namespace) classes and modules
 Style/Documentation:
-  Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-    - 'app/controllers/static_controller.rb'
-    - 'app/helpers/application_helper.rb'
-    - 'app/helpers/static_helper.rb'
-    - 'app/models/equation.rb'
-    - 'config/application.rb'
+  Enabled: false
 
 # Offense count: 45
 # Cop supports --auto-correct.
