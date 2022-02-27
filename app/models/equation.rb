@@ -8,7 +8,7 @@ class Equation
     #        = F(n) * F(n) + (F(n) * F(n) + 1)/2
     #        = (F(n) * F(n) + 1)/2
     @love_equation_1st ||= []
-    @love_equation_1st[num] ||= num < 1 ? 0.5 : (love_equation_1st(num - 1)**2 + 1) / 2
+    @love_equation_1st[num] ||= num < 1 ? 0.5 : ((love_equation_1st(num - 1)**2) + 1) / 2
   end
 
   def love_sequence_1st(num)
@@ -31,7 +31,7 @@ class Equation
     # y = x - track_record
     #   = track_record/(age - 13) * 22 - track_record
     #   = track_record(1/(age - 13) * 22 - 1)
-    ((track_record * 22) / (age - 13) - track_record).to_i
+    (((track_record * 22) / (age - 13)) - track_record).to_i
   end
 
   def love_equation_1st_score(loves_remaining)
