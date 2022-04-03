@@ -1,7 +1,0 @@
----
-# The authentication token for the application.
-# The authentication token used when reporting data back to the Skylight
-# service.
-#
-# Required in production.
-authentication: WHJ-JbpbXo3FYoKdx3xBmNrZ8M1i4L7JP-ZBGNZBZbY
