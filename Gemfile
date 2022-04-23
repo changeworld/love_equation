@@ -24,10 +24,6 @@ gem 'turbolinks'
 gem 'jbuilder'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', group: :doc
-
-# Use Unicorn as the app server
-gem 'unicorn'
-
 # Use Slim as template engine
 gem 'slim-rails'
 # Use Bootstrap as HTML, CSS, and JS framework
