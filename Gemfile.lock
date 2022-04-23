@@ -67,8 +67,8 @@ GEM
     autoprefixer-rails (10.3.3.0)
       execjs (~> 2)
     bindex (0.8.1)
-    bootsnap (1.9.1)
-      msgpack (~> 1.0)
+    bootsnap (1.11.1)
+      msgpack (~> 1.2)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
@@ -181,7 +181,7 @@ GEM
     mini_racer (0.4.0)
       libv8-node (~> 15.14.0.0)
     minitest (5.15.0)
-    msgpack (1.4.2)
+    msgpack (1.5.1)
     multi_json (1.15.0)
     nenv (0.3.0)
     nio4r (2.5.8)
@@ -377,7 +377,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootsnap
+  bootsnap (>= 1.9.3)
   bootstrap-sass
   byebug
   coveralls
@@ -404,4 +404,4 @@ DEPENDENCIES
   webpacker
 
 BUNDLED WITH
-   2.1.4
+   2.2.33
