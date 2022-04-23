@@ -14,6 +14,7 @@ gem 'mini_racer'
 gem 'bootsnap', '>= 1.9.3', require: false
 
 gem 'webpacker'
+gem 'webrick', '1.7.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
