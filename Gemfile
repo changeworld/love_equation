@@ -10,10 +10,11 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'mini_racer'
+# Use puma as the app server
+gem 'puma'
 
 gem 'bootsnap', '>= 1.9.3', require: false
 gem 'webpacker'
-gem 'webrick', '1.7.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
