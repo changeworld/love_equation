@@ -11,6 +11,7 @@ module LoveEquation
     # Initialize configuration defaults for originally generated Rails version.
     # Default locale Japanese
     config.i18n.default_locale = :ja
+    config.active_record.legacy_connection_handling = false
 
     # Configuration for the application, engines, and railties goes here.
     #
