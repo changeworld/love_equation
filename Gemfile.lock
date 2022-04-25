@@ -403,7 +403,6 @@ DEPENDENCIES
   pg (~> 1.0)
   rails (= 7.0.2.3)
   rails-controller-testing
-  rails_12factor
   rspec (~> 3.0)
   rspec-rails (~> 4.0)
   rubocop
