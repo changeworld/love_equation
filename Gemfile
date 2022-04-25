@@ -12,7 +12,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'mini_racer'
 
 gem 'bootsnap', '>= 1.9.3', require: false
-
 gem 'webpacker'
 gem 'webrick', '1.7.0'
 
@@ -28,8 +27,6 @@ gem 'sdoc', group: :doc
 gem 'slim-rails'
 # Use Bootstrap as HTML, CSS, and JS framework
 gem 'bootstrap-sass'
-# Use Rails 12factor for Heroku
-gem 'rails_12factor', group: :production
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
