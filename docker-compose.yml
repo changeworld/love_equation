@@ -16,19 +16,6 @@ services:
       - .:${PWD}
     environment:
       - DATABASE_URL=postgres://postgres:@postgres
-  spring:
-    <<: *app_base
-    ports: []
-    command: spring server
-    stdin_open: true
-    tty: true
-    pid: host
-    environment:
-      DATABASE_URL: postgres://postgres:@postgres
-      SPRING_SOCKET: /tmp/spring/spring.sock
-    volumes:
-      - .:${PWD}
-      - spring_data:/tmp/spring
   postgres:
     image: postgres:9.6
     environment:
@@ -39,4 +26,3 @@ services:
       - postgres_data:/var/lib/postgresql/data
 volumes:
   postgres_data:
-  spring_data:
