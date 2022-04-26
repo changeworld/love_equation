@@ -23,7 +23,6 @@ AllCops:
     - 'config/environments/test.rb'
     - 'config/initializers/backtrace_silencers.rb'
     - 'config/puma.rb'
-    - 'config/spring.rb'
     - 'db/schema.rb'
 
 Metrics/BlockLength:
