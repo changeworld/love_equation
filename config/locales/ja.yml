@@ -1,6 +1,7 @@
 ja:
+  title: とある数学の恋愛方式 - Love Equation
   static:
-    home:
+    index:
       question_based_on_achievements: あなたの年齢と今まで経験した恋愛回数に基づき、現在付き合っている人と結婚すべきかどうかを判定します。
       question_based_on_prospects: あなたの今後の見込み恋愛回数に基づき、現在付き合っている人と結婚すべきかどうかを判定します。
     jadge:
