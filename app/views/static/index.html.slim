@@ -2,7 +2,7 @@
   img.img-responsive.img-responsive-center src=asset_path('logo.png')
   hr
   p
-    = I18n.t('static.home.question_based_on_achievements')
+    = I18n.t('static.index.question_based_on_achievements')
   = form_tag action: :achievement, method: :post do
     = label_tag :age, I18n.t('age') + ':'
     = select_tag :age, options_for_select(@age_items)
@@ -19,7 +19,7 @@
       data-ad-client="ca-pub-6019477344384520"
       data-ad-slot="4280385095")
   p
-    = I18n.t('static.home.question_based_on_prospects')
+    = I18n.t('static.index.question_based_on_prospects')
   = form_tag action: :prospect, method: :post do
     = label_tag :love_prospects, I18n.t('love_prospects') + ':'
     = select_tag :love_prospects, options_for_select(@prospect_times)
