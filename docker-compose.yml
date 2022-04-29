@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   web: &app_base
     build:
@@ -10,19 +10,5 @@ services:
     ports:
       - "3000:3000"
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
-    depends_on:
-      - postgres
     volumes:
       - .:${PWD}
-    environment:
-      - DATABASE_URL=postgres://postgres:@postgres
-  postgres:
-    image: postgres:9.6
-    environment:
-      POSTGRES_HOST_AUTH_METHOD: 'trust'
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-volumes:
-  postgres_data:

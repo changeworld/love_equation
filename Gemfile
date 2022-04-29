@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '7.0.2.4'
-# Use postgresql as the database for Active Record
-gem 'pg', '~> 1.0'
 # Use puma as the app server
 gem 'puma'
 # Use Slim as template engine
