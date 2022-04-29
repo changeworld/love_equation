@@ -14,7 +14,6 @@ gem 'mini_racer'
 gem 'puma'
 
 gem 'bootsnap', '>= 1.9.3', require: false
-gem 'webpacker'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
