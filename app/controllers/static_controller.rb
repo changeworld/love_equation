@@ -13,7 +13,7 @@ class StaticController < ApplicationController
         params[:age].to_i,
         params[:love_achievements].to_i
       )
-      render action: :jadge
+      render 'static/_jadge'
     else
       index
     end
@@ -23,7 +23,7 @@ class StaticController < ApplicationController
     if request.post?
       equation = Equation.new
       @judgment_result = equation.prospects_judgment(params[:love_prospects].to_i)
-      render action: :jadge
+      render 'static/_jadge'
     else
       index
     end

@@ -39,7 +39,7 @@ RSpec.describe StaticController, type: :controller do
       it 'returns http success' do
         post :achievement, params: { age: 34, love_achievements: 16 }
         expect(response).to be_successful
-        expect(response).to render_template(:jadge)
+        expect(response).to render_template('static/_jadge')
         expect(assigns(:judgment_result)).not_to be_nil
       end
     end
@@ -48,7 +48,7 @@ RSpec.describe StaticController, type: :controller do
       it 'returns http success' do
         post :prospect, params: { love_prospects: 16 }
         expect(response).to be_successful
-        expect(response).to render_template(:jadge)
+        expect(response).to render_template('static/_jadge')
         expect(assigns(:judgment_result)).not_to be_nil
       end
     end
