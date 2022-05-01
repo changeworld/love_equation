@@ -3,7 +3,7 @@ class StaticController < ApplicationController
     @age_items = (18..100).map { |n| [n, n] }
     @achievement_times = (1..100).map { |n| [n, n] }
     @prospect_times = (0..100).map { |n| [n, n] }
-    render action: :index
+    render 'static/_index'
   end
 
   def achievement
@@ -13,7 +13,7 @@ class StaticController < ApplicationController
         params[:age].to_i,
         params[:love_achievements].to_i
       )
-      render action: :jadge
+      render 'static/_jadge'
     else
       index
     end
@@ -23,7 +23,7 @@ class StaticController < ApplicationController
     if request.post?
       equation = Equation.new
       @judgment_result = equation.prospects_judgment(params[:love_prospects].to_i)
-      render action: :jadge
+      render 'static/_jadge'
     else
       index
     end
