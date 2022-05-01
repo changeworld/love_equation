@@ -4,9 +4,9 @@ html
     title
       = I18n.t('title')
     <meta name='viewport' content='width=device-width', initial-scale='1.0'>
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbo-track' => true
     = stylesheet_link_tag    'http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css'
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbo-track' => true
     = csrf_meta_tags
   body
     = yield
