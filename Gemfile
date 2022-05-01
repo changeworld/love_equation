@@ -2,11 +2,11 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '7.0.2.4'
-# Use puma as the app server
+# Use the Puma web server [https://github.com/puma/puma]
 gem 'puma'
 # Use Slim as template engine
 gem 'slim-rails'
-# Use SCSS for stylesheets
+# Use Sass to process CSS
 gem 'sass-rails', '~> 5.0'
 # Use Bootstrap as HTML, CSS, and JS framework
 gem 'bootstrap-sass'
@@ -20,7 +20,7 @@ gem 'turbolinks'
 gem 'jbuilder'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', group: :doc
-
+# Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.9.3', require: false
 
 group :development, :test do
