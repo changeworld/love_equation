@@ -29,7 +29,6 @@ group :development, :test do
   gem 'rspec', '~> 3.0'
   gem 'rspec-rails', '~> 4.0'
   gem 'rails-controller-testing'
-  gem 'guard-rspec', require: false
   # Use RuboCop as Ruby static code analyzer
   gem 'rubocop', require: false
   # Use Coveralls for Test Coverage History & Statistics
