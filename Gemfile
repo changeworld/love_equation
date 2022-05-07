@@ -26,10 +26,9 @@ gem 'bootsnap', '>= 1.9.3', require: false
 group :development, :test do
   gem 'debug', require: false
   # Use Rspec as test framework
-  gem 'guard-rspec', require: false
-  gem 'rails-controller-testing'
   gem 'rspec', '~> 3.0'
   gem 'rspec-rails', '~> 4.0'
+  gem 'rails-controller-testing'
   # Use RuboCop as Ruby static code analyzer
   gem 'rubocop', require: false
   # Use Coveralls for Test Coverage History & Statistics
