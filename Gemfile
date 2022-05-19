@@ -22,12 +22,14 @@ gem 'jbuilder'
 gem 'sdoc', group: :doc
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.9.3', require: false
+gem 'nokogiri', '1.13.6'
 
 group :development, :test do
   gem 'debug', require: false
   # Use Rspec as test framework
   gem 'rspec', '~> 3.0'
   gem 'rspec-rails', '~> 4.0'
+
   gem 'rails-controller-testing'
   # Use RuboCop as Ruby static code analyzer
   gem 'rubocop', require: false
