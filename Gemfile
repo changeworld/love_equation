@@ -28,7 +28,7 @@ group :development, :test do
   gem 'debug', require: false
   # Use Rspec as test framework
   gem 'rspec', '3.11.0'
-  gem 'rspec-rails', '~> 4.0'
+  gem 'rspec-rails', '4.0.2'
 
   gem 'rails-controller-testing'
   # Use RuboCop as Ruby static code analyzer
