@@ -26,11 +26,10 @@ gem 'nokogiri', '1.13.6'
 
 group :development, :test do
   gem 'debug', require: false
+  gem 'rails-controller-testing'
   # Use Rspec as test framework
   gem 'rspec', '3.11.0'
   gem 'rspec-rails', '5.0.3'
-
-  gem 'rails-controller-testing'
   # Use RuboCop as Ruby static code analyzer
   gem 'rubocop', require: false
   # Use Coveralls for Test Coverage History & Statistics
