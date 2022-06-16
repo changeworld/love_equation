@@ -29,7 +29,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   # Use Rspec as test framework
   gem 'rspec', '3.11.0'
-  gem 'rspec-rails', '5.1.0'
+  gem 'rspec-rails', '5.1.1'
   # Use RuboCop as Ruby static code analyzer
   gem 'rubocop', require: false
   # Use Coveralls for Test Coverage History & Statistics
