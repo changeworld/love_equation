@@ -367,7 +367,7 @@ DEPENDENCIES
   metric_fu
   mini_racer
   nokogiri (= 1.13.6)
-  puma
+  puma (= 5.6.4)
   rails (= 7.0.3)
   rails-controller-testing
   rspec (= 3.11.0)
