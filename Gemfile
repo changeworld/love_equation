@@ -5,7 +5,7 @@ gem 'rails', '7.0.3'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma'
 # Use Slim as template engine
-gem 'slim-rails', '3.4.0'
+gem 'slim-rails', '3.5.0'
 # Use Sass to process CSS
 gem 'sass-rails', '~> 5.0'
 # Use Bootstrap as HTML, CSS, and JS framework
