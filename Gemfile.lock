@@ -70,7 +70,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     arrayfields (4.9.2)
     ast (2.4.2)
-    autoprefixer-rails (10.3.3.0)
+    autoprefixer-rails (10.4.7.0)
       execjs (~> 2)
     bindex (0.8.1)
     bootsnap (1.11.1)
@@ -110,7 +110,7 @@ GEM
     erubis (2.7.0)
     execjs (2.8.1)
     fattr (2.4.0)
-    ffi (1.15.4)
+    ffi (1.15.5)
     flay (2.12.1)
       erubis (~> 2.7.0)
       path_expander (~> 1.0)
@@ -360,7 +360,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.9.3)
-  bootstrap-sass
+  bootstrap-sass (= 3.4.1)
   coveralls
   debug
   jbuilder
