@@ -7,7 +7,7 @@ gem 'puma', '5.6.4'
 # Use Slim as template engine
 gem 'slim-rails', '3.5.1'
 # Use Sass to process CSS
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '6.0.0'
 # Use Bootstrap as HTML, CSS, and JS framework
 gem 'bootstrap-sass', '3.4.1'
 # Use Uglifier as compressor for JavaScript assets
