@@ -19,7 +19,7 @@ gem 'turbo-rails', '1.1.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '2.3.2', group: :doc
+gem 'sdoc', '2.4.0', group: :doc
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.9.3', require: false
 gem 'nokogiri', '1.13.6'
