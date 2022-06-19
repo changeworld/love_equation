@@ -360,7 +360,7 @@ DEPENDENCIES
   bootsnap (>= 1.9.3)
   bootstrap-sass (= 3.4.1)
   coveralls (= 0.8.23)
-  debug
+  debug (= 1.5.0)
   jbuilder
   metric_fu (= 4.13.0)
   mini_racer
