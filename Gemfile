@@ -17,7 +17,7 @@ gem 'mini_racer'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem 'turbo-rails', '1.1.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder'
+gem 'jbuilder', '2.11.5'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '2.4.0', group: :doc
 # Reduces boot times through caching; required in config/boot.rb
