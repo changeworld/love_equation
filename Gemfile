@@ -35,7 +35,7 @@ group :development, :test do
   # Use Coveralls for Test Coverage History & Statistics
   gem 'coveralls', require: false
   # Use MetricFu for fist full of code metrics
-  gem 'metric_fu', require: false
+  gem 'metric_fu', '4.13.0', require: false
 end
 
 group :development do
