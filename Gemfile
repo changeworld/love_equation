@@ -33,7 +33,7 @@ group :development, :test do
   # Use RuboCop as Ruby static code analyzer
   gem 'rubocop', require: false
   # Use Coveralls for Test Coverage History & Statistics
-  gem 'coveralls', require: false
+  gem 'coveralls', '0.8.23', require: false
   # Use MetricFu for fist full of code metrics
   gem 'metric_fu', '4.13.0', require: false
 end

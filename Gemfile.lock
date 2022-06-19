@@ -332,7 +332,7 @@ GEM
     thor (1.2.1)
     tilt (2.0.10)
     timeout (0.2.0)
-    tins (1.29.1)
+    tins (1.31.1)
       sync
     turbo-rails (1.1.1)
       actionpack (>= 6.0.0)
@@ -359,7 +359,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.9.3)
   bootstrap-sass (= 3.4.1)
-  coveralls
+  coveralls (= 0.8.23)
   debug
   jbuilder
   metric_fu (= 4.13.0)
