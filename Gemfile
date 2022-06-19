@@ -26,7 +26,7 @@ gem 'nokogiri', '1.13.6'
 
 group :development, :test do
   gem 'debug', require: false
-  gem 'rails-controller-testing'
+  gem 'rails-controller-testing', '1.0.5'
   # Use Rspec as test framework
   gem 'rspec', '3.11.0'
   gem 'rspec-rails', '5.1.2'
