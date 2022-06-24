@@ -45,9 +45,9 @@ class Equation
     if loves_remaining <= 0
       I18n.t('static.jadge.zero')
     elsif loves_remaining == 1
-      I18n.t('static.jadge.one', score: score)
+      I18n.t('static.jadge.one', score:)
     else
-      I18n.t('static.jadge.more', loves_remaining: loves_remaining, score: score)
+      I18n.t('static.jadge.more', loves_remaining:, score:)
     end
   end
 
