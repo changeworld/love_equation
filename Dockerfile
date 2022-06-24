@@ -1,7 +1,18 @@
 FROM ruby:3.0.4
 
-RUN apt-get update && \
-    rm -rf /var/lib/apt/lists/*
+RUN set -x \
+  && curl -sL https://deb.nodesource.com/setup_15.x | bash - \
+  && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
+  && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
+  && apt-get update -qq \
+  && apt-get install -y --no-install-recommends \
+    build-essential \
+    libpq-dev libxslt-dev libxml2-dev \
+    nodejs yarn \
+    curl vim sudo cron \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/* \
+  && rm -rf /var/cache/yum/*
 
 ARG APP_HOME
 ARG BUNDLE_JOBS=4
