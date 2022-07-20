@@ -21,10 +21,9 @@ RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
 
 COPY Gemfile* $APP_HOME/
-ENV BUNDLER_VERSION 2.3.3
+ENV BUNDLER_VERSION 2.3.10
 RUN gem update --system \
     && gem install bundler -v $BUNDLER_VERSION \
-    && bundle _2.3.3_ update --bundler \
     && bundle install -j 4
 RUN bundle install
 COPY . .
