@@ -21,7 +21,7 @@ RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
 
 COPY Gemfile* $APP_HOME/
-ENV BUNDLER_VERSION 2.3.10
+ENV BUNDLER_VERSION 2.3.12
 RUN gem update --system \
     && gem install bundler -v $BUNDLER_VERSION \
     && bundle install -j 4
