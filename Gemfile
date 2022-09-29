@@ -25,7 +25,7 @@ gem 'bootsnap', '1.12.0', require: false
 gem 'nokogiri', '1.13.6'
 
 group :development, :test do
-  gem 'debug', '1.5.0', require: false
+  gem 'debug', '1.6.0', require: false
   gem 'rails-controller-testing', '1.0.5'
   # Use Rspec as test framework
   gem 'rspec', '3.11.0'
