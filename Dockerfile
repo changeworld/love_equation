@@ -1,20 +1,36 @@
 ARG RUBY_VERSION
-FROM ruby:$RUBY_VERSION
+FROM ruby:$RUBY_VERSION-slim
+
+RUN apt-get update -qq\
+  && DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends\
+    build-essential\
+    gnupg2\
+    curl\
+    less\
+    git\
+  && apt-get clean\
+  && rm -rf /var/cache/apt/archives/*\
+  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*\
+  && truncate -s 0 /var/log/*log
 
 ARG NODE_MAJOR_VERSION
-RUN set -x \
-  && curl -sL https://deb.nodesource.com/setup_$NODE_MAJOR_VERSION.x | bash - \
-  && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
-  && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
-  && apt-get update -qq \
-  && apt-get install -y --no-install-recommends \
-    build-essential \
-    libpq-dev libxslt-dev libxml2-dev \
-    nodejs yarn \
-    curl vim sudo cron \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/* \
-  && rm -rf /var/cache/yum/*
+ARG YARN_VERSION
+RUN curl -sL https://deb.nodesource.com/setup_$NODE_MAJOR_VERSION.x | bash -
+RUN apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get -yq dist-upgrade &&\
+  DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends\
+    nodejs\
+    && apt-get clean\
+    && rm -rf /var/cache/apt/archives/*\
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*\
+    && truncate -s 0 /var/log/*log
+RUN npm install -g yarn@$YARN_VERSION
+
+RUN apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get -yq dist-upgrade &&\
+  DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends\
+    && apt-get clean\
+    && rm -rf /var/cache/apt/archives/*\
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*\
+    && truncate -s 0 /var/log/*log
 
 ARG APP_HOME
 ARG BUNDLE_JOBS
