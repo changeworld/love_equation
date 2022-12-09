@@ -1,4 +1,5 @@
-FROM ruby:3.1.3
+ARG RUBY_VERSION
+FROM ruby:$RUBY_VERSION
 
 RUN set -x \
   && curl -sL https://deb.nodesource.com/setup_15.x | bash - \
@@ -15,7 +16,7 @@ RUN set -x \
   && rm -rf /var/cache/yum/*
 
 ARG APP_HOME
-ARG BUNDLE_JOBS=4
+ARG BUNDLE_JOBS
 
 RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
