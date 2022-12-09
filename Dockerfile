@@ -1,7 +1,9 @@
-FROM ruby:3.1.3
+ARG RUBY_VERSION
+FROM ruby:$RUBY_VERSION
 
+ARG NODE_MAJOR_VERSION
 RUN set -x \
-  && curl -sL https://deb.nodesource.com/setup_15.x | bash - \
+  && curl -sL https://deb.nodesource.com/setup_$NODE_MAJOR_VERSION.x | bash - \
   && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
   && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
   && apt-get update -qq \
@@ -15,7 +17,7 @@ RUN set -x \
   && rm -rf /var/cache/yum/*
 
 ARG APP_HOME
-ARG BUNDLE_JOBS=4
+ARG BUNDLE_JOBS
 
 RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
