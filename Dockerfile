@@ -1,4 +1,4 @@
-FROM ruby:3.1.3
+FROM ruby:3.1.3-slim
 
 RUN set -x \
   && curl -sL https://deb.nodesource.com/setup_15.x | bash - \
