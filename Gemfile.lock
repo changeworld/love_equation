@@ -103,7 +103,7 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.6.2)
-    loofah (2.19.0)
+    loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -122,7 +122,7 @@ GEM
     net-smtp (0.3.2)
       net-protocol
     nio4r (2.5.8)
-    nokogiri (1.13.10-aarch64-linux)
+    nokogiri (1.13.10-x86_64-linux)
       racc (~> 1.4)
     parallel (1.22.1)
     parser (3.1.2.1)
@@ -268,7 +268,7 @@ GEM
     zeitwerk (2.6.1)
 
 PLATFORMS
-  ruby
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap (= 1.13.0)
