@@ -22,7 +22,7 @@ gem 'jbuilder', '2.11.5'
 gem 'sdoc', '2.4.0', group: :doc
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '1.13.0', require: false
-gem 'nokogiri', '1.13.10'
+gem 'nokogiri', '1.14.3'
 gem 'rack', '2.2.6.4'
 
 group :development, :test do
