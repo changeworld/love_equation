@@ -24,6 +24,8 @@ gem 'sdoc', '2.4.0', group: :doc
 gem 'bootsnap', '1.13.0', require: false
 gem 'nokogiri', '1.14.3'
 gem 'rack', '2.2.6.4'
+gem 'json', '2.6.3'
+gem 'psych', '5.0.1'
 
 group :development, :test do
   gem 'debug', '1.6.2', require: false
