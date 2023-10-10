@@ -1,6 +1,6 @@
 # ARG RUBY_VERSION
 # FROM ruby:$RUBY_VERSION-slim
-FROM ruby:3.2.0-slim
+FROM ruby:3.2.1-slim
 
 RUN apt-get update -qq\
   && DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends\
@@ -40,7 +40,7 @@ RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
 
 COPY Gemfile* $APP_HOME/
-ENV BUNDLER_VERSION 2.3.12
+ENV BUNDLER_VERSION 2.4.20
 RUN gem update --system \
     && gem install bundler -v $BUNDLER_VERSION \
     && bundle install -j 4
