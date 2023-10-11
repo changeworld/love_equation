@@ -1,6 +1,5 @@
-# ARG RUBY_VERSION
-# FROM ruby:$RUBY_VERSION-slim
-FROM ruby:3.2.2-slim
+ARG RUBY_VERSION
+FROM ruby:$RUBY_VERSION-slim
 
 RUN apt-get update -qq\
   && DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends\
