@@ -13,7 +13,7 @@ gem 'bootstrap-sass', '3.4.1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'execjs', '2.8.1'
+gem 'execjs', '2.9.0'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem 'turbo-rails', '1.1.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
