@@ -134,7 +134,7 @@ GEM
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
-    psych (5.1.1)
+    psych (5.1.1.1)
       stringio
     puma (6.4.0)
       nio4r (~> 2.0)
@@ -289,7 +289,7 @@ DEPENDENCIES
   jbuilder (= 2.11.5)
   json (= 2.6.3)
   nokogiri (= 1.15.4)
-  psych (= 5.1.1)
+  psych (= 5.1.1.1)
   puma (= 6.4.0)
   rack (= 2.2.6.4)
   rails (= 7.0.8)
