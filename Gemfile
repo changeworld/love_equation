@@ -31,7 +31,7 @@ group :development, :test do
   gem 'debug', '1.8.0', require: false
   gem 'rails-controller-testing', '1.0.5'
   # Use Rspec as test framework
-  gem 'rspec', '3.11.0'
+  gem 'rspec', '3.12.0'
   gem 'rspec-rails', '5.1.2'
   # Use RuboCop as Ruby static code analyzer
   gem 'rubocop', '1.36.0', require: false
