@@ -28,7 +28,7 @@ gem 'psych', '5.1.1.1'
 gem 'rack', '2.2.8'
 
 group :development, :test do
-  gem 'debug', '1.7.1', require: false
+  gem 'debug', '1.7.2', require: false
   gem 'rails-controller-testing', '1.0.5'
   # Use Rspec as test framework
   gem 'rspec', '3.11.0'
