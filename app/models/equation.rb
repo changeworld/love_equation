@@ -36,7 +36,7 @@ class Equation
 
   def love_equation_1st_score(loves_remaining)
     # Return Love equation 1st score
-    count = loves_remaining < 1 ? 1 : loves_remaining
+    count = [loves_remaining, 1].max
     ((love_equation_1st(count - 1) + 0.01) * 100).to_d.floor.to_i
   end
 
