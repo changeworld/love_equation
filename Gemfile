@@ -21,7 +21,7 @@ gem 'jbuilder', '2.11.5'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '2.6.1', group: :doc
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '1.16.0', require: false
+gem 'bootsnap', '1.17.0', require: false
 gem 'json', '2.6.3'
 gem 'nokogiri', '1.15.4'
 gem 'psych', '5.1.1.1'
