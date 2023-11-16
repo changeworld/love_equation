@@ -70,7 +70,7 @@ GEM
     autoprefixer-rails (10.4.7.0)
       execjs (~> 2)
     bindex (0.8.1)
-    bootsnap (1.16.0)
+    bootsnap (1.17.0)
       msgpack (~> 1.2)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
@@ -285,7 +285,7 @@ PLATFORMS
   x86_64-darwin-18
 
 DEPENDENCIES
-  bootsnap (= 1.16.0)
+  bootsnap (= 1.17.0)
   bootstrap-sass (= 3.4.1)
   coveralls (= 0.8.23)
   debug (= 1.8.0)
