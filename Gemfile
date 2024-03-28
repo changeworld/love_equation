@@ -20,6 +20,7 @@ gem 'turbo-rails', '1.5.0'
 gem 'jbuilder', '2.11.5'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '2.6.1', group: :doc
+gem 'rdoc', '6.6.3.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '1.17.0', require: false
 gem 'json', '2.6.3'
