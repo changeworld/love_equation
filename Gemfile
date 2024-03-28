@@ -25,7 +25,7 @@ gem 'bootsnap', '1.17.0', require: false
 gem 'json', '2.6.3'
 gem 'nokogiri', '1.15.5'
 gem 'psych', '5.1.1.1'
-gem 'rack', '2.2.8'
+gem 'rack', '2.2.8.1'
 
 group :development, :test do
   gem 'debug', '1.8.0', require: false
