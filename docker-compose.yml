@@ -9,7 +9,6 @@ services:
         BUNDLE_JOBS: 4
         RUBY_VERSION: 3.2.2
         NODE_MAJOR_VERSION: 16
-        YARN_VERSION: 1.22.19
     ports:
       - "3000:3000"
     command: bundle exec rails s -p 3000 -b '0.0.0.0'

@@ -14,16 +14,14 @@ RUN apt-get update -qq\
   && truncate -s 0 /var/log/*log
 
 ARG NODE_MAJOR_VERSION
-ARG YARN_VERSION
 RUN curl -sL https://deb.nodesource.com/setup_$NODE_MAJOR_VERSION.x | bash -
 RUN apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get -yq dist-upgrade &&\
   DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends\
-    nodejs npm\
+    nodejs\
     && apt-get clean\
     && rm -rf /var/cache/apt/archives/*\
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*\
     && truncate -s 0 /var/log/*log
-RUN npm install -g yarn@$YARN_VERSION
 
 RUN apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get -yq dist-upgrade &&\
   DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends\
