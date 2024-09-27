@@ -142,7 +142,7 @@ GEM
       timeout
     net-smtp (0.5.0)
       net-protocol
-    nio4r (2.7.1)
+    nio4r (2.7.3)
     nokogiri (1.16.5)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
@@ -154,7 +154,7 @@ GEM
       racc
     psych (5.1.1.1)
       stringio
-    puma (6.4.2)
+    puma (6.4.3)
       nio4r (~> 2.0)
     racc (1.7.3)
     rack (2.2.8.1)
@@ -318,7 +318,7 @@ DEPENDENCIES
   json (= 2.6.3)
   nokogiri (= 1.16.5)
   psych (= 5.1.1.1)
-  puma (= 6.4.2)
+  puma (= 6.4.3)
   rack (= 2.2.8.1)
   rails (= 7.1.3.1)
   rails-controller-testing (= 1.0.5)
