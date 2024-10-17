@@ -15,7 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'execjs', '2.9.1'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem 'turbo-rails', '1.5.0'
+gem 'turbo-rails', '2.0.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '2.11.5'
 # bundle exec rake doc:rails generates the API under doc/api.
