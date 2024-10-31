@@ -35,7 +35,7 @@ group :development, :test do
   gem 'rspec', '3.12.0'
   gem 'rspec-rails', '6.0.3'
   # Use RuboCop as Ruby static code analyzer
-  gem 'rubocop', '1.57.2', require: false
+  gem 'rubocop', '1.68.0', require: false
   # Use Coveralls for Test Coverage History & Statistics
   gem 'coveralls', '0.8.23', require: false
 end
