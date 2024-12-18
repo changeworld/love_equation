@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '7.1.4.1'
+gem 'rails', '7.1.5.1'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '6.4.3'
 # Use Slim as template engine
