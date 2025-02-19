@@ -24,7 +24,7 @@ gem 'sdoc', '2.6.1', group: :doc
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '1.17.0', require: false
 gem 'json', '2.6.3'
-gem 'nokogiri', '1.16.8'
+gem 'nokogiri', '1.18.3'
 gem 'psych', '5.1.1.1'
 gem 'rack', '2.2.8.1'
 
